@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors - RESTAURAÇÃO DO TEMPLO (Premium, Sacro, Vital) */
+  --color-brand-light: #FDFBF7;   /* Off-White / Cream */
+  --color-brand-paper: #F5F1E9;   /* Light Sand background */
+  --color-brand-gold: #D4AF37;    /* Divine Gold */
+  --color-brand-gold-dark: #B8860B; 
+  
+  /* Primary: SAGE GREEN (Healing, Renewal, Life) */
+  --color-brand-default: #7C9D8E;  /* Sage Green */
+  --color-brand-dark: #2D3436;     /* Charcoal / Slate */
+  
+  /* Accent: WARM EARTH / TERRACOTTA (Stability, Energy) */
+  --color-brand-accent: #C0392B;   /* Deep Warm Red/Earth for urgency/CTA */
+  
+  /* Secondary: SOFT BREEZE (Calm) */
+  --color-brand-secondary: #AFC8AD;
+  
+  /* Typography */
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+
+  /* Animations */
+  --animate-fade-in: fadeIn 0.8s ease-out;
+  --animate-slide-up: slideUp 0.8s ease-out;
+  --animate-float: float 3s ease-in-out infinite;
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    0% {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+}
+
+/* Base Styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-brand-light);
+    color: var(--color-brand-dark);
+    font-family: var(--font-sans);
+  }
+}
